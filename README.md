@@ -1,4 +1,4 @@
-<h1 align="center">Project Template</h1>
+<h1 align="center">Meon</h1>
 
 ## Requirements
 

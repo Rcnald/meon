@@ -2,6 +2,33 @@
     // Colors
 
     --color-white: #FFF;
+    --color-black: #000000;
+    --color-blue: #335D9C;
+    --color-blue-dark: #4458A5;
+    --color-gray: #3D4651;
+    --color-gray-dark: #26303A;
+    --color-gray-light: #6B737F;
+    --color-gray-lighter: #F2F6F9;
+    --color-green: #25D366;
+
+    --main-color: var(--color-blue-dark);
+    --text-color: var(--color-gray-dark);
+    --text-color-constrast: var(--color-gray-lighter);
+    --header-color: var(--color-black);
+    --description-color: var(--color-gray);
+    --placeholder-color: var(--color-gray-light);
+    --whatsapp-color: var(--color-green);
+    --facebook-color: var(--color-blue);
+
+    // Fonts
+
+    --font-inter: font-family: 'Inter', sans-serif;
+    --font-lora : font-family: 'Lora', serif;
+    --font-nunito : font-family: 'Nunito', sans-serif;
+
+    --font-text-read: var(--font-lora);
+    --font-main: var(--font-inter);
+    --font-accent: var(--font-nunito);
 }
 
 /*
