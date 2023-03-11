@@ -1,0 +1,79 @@
+@use '../state/' as *;
+
+$component-name: 'c-social-media';
+
+.#{$component-name}{
+    @apply flex gap-[0.875rem];
+
+    &__item{
+        @apply flex text-[1.5rem] text-color-text-constrast;
+        transition: color 1s ease-out;
+
+        &:hover{
+            @apply text-color-text;
+            transition: color 500ms ease-in;
+        }
+    }
+
+    &__icon{
+        &--facebook{
+            @apply relative;
+
+            &::after{
+                @apply content-['\e92f'] text-color-linkedin;
+                @extend %icon-animation-in;
+            }
+
+            &:hover{
+                &::after{
+                    @extend %icon-animation-out;
+                }
+            }
+        }
+
+        &--instagram{
+            @apply relative;
+
+            &::after{
+                @apply content-['\e942'] text-color-instagram;
+                @extend %icon-animation-in;
+            }
+
+            &:hover{
+                &::after{
+                    @extend %icon-animation-out;
+                }
+            }
+        }
+
+        &--youtube{
+            @apply relative;
+
+            &::after{
+                @apply content-['\e992'] text-color-youtube;
+                @extend %icon-animation-in;
+            }
+
+            &:hover{
+                &::after{
+                    @extend %icon-animation-out;
+                }
+            }
+        }
+
+        &--linkedin{
+            @apply relative;
+
+            &::after{
+                @apply content-['\e94d'] text-color-linkedin;
+                @extend %icon-animation-in;
+            }
+
+            &:hover{
+                &::after{
+                    @extend %icon-animation-out;
+                }
+            }
+        }
+    }
+}

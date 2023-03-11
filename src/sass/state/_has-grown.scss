@@ -1,0 +1,10 @@
+%icon-animation-in{
+    @apply absolute top-0 left-0;
+    clip-path: circle(0% at 50% 100%);
+    transition: clip-path 1s ease-out;
+}
+
+%icon-animation-out{
+    clip-path: circle(100%);
+    transition: clip-path 500ms ease-in;
+}

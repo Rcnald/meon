@@ -4,14 +4,19 @@
     --color-white: #FFF;
     --color-black: #000000;
     --color-blue: #335D9C;
-    --color-blue-dark: #4458A5;
+    --color-blue-light: #007bb6;
+    --color-blue-dark: #6C7EC2;
+    --color-blue-darker: #4458A5;
     --color-gray: #3D4651;
     --color-gray-dark: #26303A;
     --color-gray-light: #6B737F;
     --color-gray-lighter: #F2F6F9;
     --color-green: #25D366;
+    --color-magenta: #C32AA3;
+    --color-red: #FF0000;
 
-    --main-color: var(--color-blue-dark);
+    --main-color: var(--color-blue-darker);
+    --main-color-contrast: var(--color-blue-dark);
     --text-color: var(--color-gray-dark);
     --text-color-constrast: var(--color-gray-lighter);
     --header-color: var(--color-black);
@@ -19,6 +24,9 @@
     --placeholder-color: var(--color-gray-light);
     --whatsapp-color: var(--color-green);
     --facebook-color: var(--color-blue);
+    --instagram-color: var(--color-magenta);
+    --linkedin-color: var(--color-blue-light);
+    --youtube-color: var(--color-red);
 
     // Fonts
 

@@ -9,79 +9,92 @@
         <link rel="stylesheet" href="css/main.css">
         <title>Meon</title>
     </head>
-    <body>
+    <body class="l-body">
         <header class="l-header">
             <div class="l-header__wrapper">
                 <ul class="c-social-media">
-                    <li class='c-social-media__item c-social-media__item--facebook'>
-                        <a  class='bx bxl-facebook' href="#" target="_blank"></a>
+                    <li class='c-social-media__item c-social-media__item'>
+                        <a  class='c-social-media__icon--facebook bx bxl-facebook' href="#" target="_blank"></a>
                     </li>
 
-                    <li class='c-social-media__item c-social-media__item--instagram'>
-                        <a  class='bx bxl-instagram' href="#" target="_blank"></a>
+                    <li class='c-social-media__item c-social-media__item'>
+                        <a  class='c-social-media__icon--instagram bx bxl-instagram' href="#" target="_blank"></span></a>
                     </li>
                     
-                    <li class='c-social-media__item c-social-media__item--youtube'>
-                        <a  class='bx bxl-youtube' href="#" target="_blank"></a>
+                    <li class='c-social-media__item c-social-media__item'>
+                        <a  class='c-social-media__icon--youtube bx bxl-youtube' href="#" target="_blank"></a>
                     </li>
 
-                    <li class='c-social-media__item c-social-media__item--linkedin'>
-                        <a  class='bx bxl-linkedin' href="#" target="_blank"></a>
+                    <li class='c-social-media__item c-social-media__item'>
+                        <a  class='c-social-media__icon--linkedin bx bxl-linkedin' href="#" target="_blank"></a>
                     </li>
                 </ul>
 
                 <ul class="c-list">
-                    <li class="c-list__item"><a href="#">Fale Conosco</a></li>
-                    <li class="c-list__item"><a href="#">Anuncie no Meon</a></li>
-                    <li class="c-list__item"><a href="#">Quem Somos</a></li>
+                    <li class="c-list__item"><a class="c-list__link" href="#">Fale Conosco</a></li>
+                    <li class="c-list__item"><a class="c-list__link" href="#">Anuncie no Meon</a></li>
+                    <li class="c-list__item"><a class="c-list__link" href="#">Quem Somos</a></li>
                 </ul>
             </div>
 
             <nav class="c-navigation">
-                <img src="./assets/logo.svg" alt="Logo do Meon" class="c-logo">
+                <img class="c-logo" src="./assets/logo.svg" alt="Logo do Meon" loading="lazy" width="144" height="40">
 
                 <ul class="c-list">
                     <li class="c-list__item">
-                        <span>Notícias<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Notícias<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
 
-                        <ul class="c-list__submenu">
-                            <li class="c-list__submenu-item"></li>
-                        </ul>
+                        <div class="c-list__content">
+                            <ul class="c-list__submenu">
+                                <li class="c-list__submenu-item">RMVale</li>
+                                <li class="c-list__submenu-item">Litoral Norte</li>
+                                <li class="c-list__submenu-item">Política</li>
+                                <li class="c-list__submenu-item">Brasil</li>
+                                <li class="c-list__submenu-item">Mundo</li>
+                            </ul>
+                        </div>
                     </li>
 
                     <li class="c-list__item">
-                        <span>Meon Jovem<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Meon Jovem<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
 
-                        <ul class="c-list__submenu">
-                            <li class="c-list__submenu-item"></li>
-                        </ul>
+                        <div class="c-list__content c-list__content--teen">
+                            <ul class="c-list__submenu c-list__submenu--teen">
+                                <li class="c-list__submenu-item">Conteúdo</li>
+                                <li class="c-list__submenu-item">Seja um apoiador!</li>
+                                <li class="c-list__submenu-item">Comissão julgadora</li>
+                            </ul>
+                        </div>
                     </li>
 
                     <li class="c-list__item">
-                        <a href="#">Metrópole Magazine</a>
+                        <a class="c-list__link" href="#">Metrópole Magazine</a>
                     </li>
 
                     <li class="c-list__item">
-                        <span>Meon Turismo<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Meon Turismo<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
 
-                        <ul class="c-list__submenu">
-                            <li class="c-list__submenu-item"></li>
-                        </ul>
+                        <div class="c-list__content c-list__content--tour">
+                            <ul class="c-list__submenu c-list__submenu--tour">
+                                <li class="c-list__submenu-item">Editora</li>
+                                <li class="c-list__submenu-item">Edições</li>
+                            </ul>
+                        </div>
                     </li>
 
                     <li class="c-list__item">
-                        <a href="#">Meon Jornal</a>
+                        <a class="c-list__link" href="#">Meon Jornal</a>
                     </li>
 
                     <li class="c-list__item">
-                        <a href="#">Social</a>
+                        <a class="c-list__link" href="#">Social</a>
                     </li>
                     
                     <li class="c-list__item">
-                        <a href="#">Meon Menu</a>
+                        <a class="c-list__link" href="#">Meon Menu</a>
                     </li>
                     <li class="c-list__item">
-                        <a href="#">Meon Imóveis</a>
+                        <a class="c-list__link" href="#">Meon Imóveis</a>
                     </li>
                 </ul>
 
@@ -96,35 +109,35 @@
                 <p class="l-main__description">Contextualização e surgimento dos primeiros animes no Brasil</p>
                 
                 <ul class="c-social-media">
-                    <li class="c-social-media__item c-social-media__item--facebook">
-                        <a class='bx bxl-facebook' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class='c-social-media__icon--facebook bx bxl-facebook' href="#" target="_blank"></a>
                     </li>
 
-                    <li class="c-social-media__item c-social-media__item--twitter">
-                        <a class='bx bxl-twitter' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class='c-social-media__icon--twitter bx bxl-twitter' href="#" target="_blank"></a>
                     </li>
 
-                    <li class="c-social-media__item c-social-media__item--whatsapp">
-                        <a class='bx bxl-whatsapp' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class='c-social-media__icon--whatsapp bx bxl-whatsapp' href="#" target="_blank"></a>
                     </li>
 
                     <li class="c-social-media__item">
                         <span>...</span>
 
                         <ul class="c-social-media__submenu">
-                            <li class="c-social-medial__submenu-item--linkedin">
-                                <a class='bx bxl-linkedin' href="#" target="_blank"></a>
+                            <li class="c-social-media__submenu-item">
+                                <a class='c-social-media__icon--linkedin bx bxl-linkedin' href="#" target="_blank"></a>
                             </li>
                             
-                            <li class="c-social-medial__submenu-item--linkedin">
-                                <a class='bx bxs-envelope' href="#" target="_blank"></a>
+                            <li class="c-social-media__submenu-item">
+                                <a class='c-social-media__icon--mail bx bxs-envelope' href="#" target="_blank"></a>
                             </li>
                         </ul>
                     </li>
                 </ul>
 
                 <div class="c-author">
-                    <img class="c-author__image" src="./assets/author.svg" alt="Foto do autor">
+                    <img class="c-author__image" src="./assets/author.svg" alt="Foto do autor" loading="lazy" width="55" height="55">
                     <p class="c-author__information">
                         Escrito por 
                         <h5 class="c-author__name">Matheus Henrique Cleminchc</h5>
@@ -135,7 +148,7 @@
 
             <figure class="c-ilustration">
                 <figcaption class="c-ilustration__caption">Foto: Reprodução</figcaption>
-                <img class="c-ilustration__image" src="./assets/ilustration.svg" alt="Personagens de anime">
+                <img class="c-ilustration__image" src="./assets/ilustration.svg" alt="Personagens de anime" loading="lazy" width="588" height="360">
             </figure>
 
             <div class="l-main__content">
@@ -174,7 +187,7 @@
 
             <figure class="c-ilustration">
                 <figcaption class="c-ilustration__caption">Foto: Reprodução</figcaption>
-                <img class="c-ilustration__image" src="./assets/timeline.svg" alt="Personagens de anime">
+                <img class="c-ilustration__image" src="./assets/timeline.svg" alt="Linha do tempo de animes" loading="lazy" width="552" height="356">
             </figure>
 
             <h6 class="l-main__topic">
@@ -185,7 +198,7 @@
         <span class="c-line"></span>
         
         <div class="c-author">
-            <img class="c-author__image" src="./assets/author.svg" alt="Foto do autor">
+            <img class="c-author__image" src="./assets/author.svg" alt="Foto do autor" loading="lazy" width="55" height="55">
             <p class="c-author__information">
                 <h5 class="c-author__name">Matheus Henrique Cleminchc</h5>
                 <p class="c-author__occupation">
@@ -198,21 +211,21 @@
 
         <section class="c-news">
             <article class="c-card">
-                <img class="c-card__image" src="./assets/death-match.svg" alt="Foto de pessoas em preto e branco">
+                <img class="c-card__image" src="./assets/death-match.svg" alt="Foto de pessoas em preto e branco" loading="lazy" width="212" height="119">
                 <span class="c-tag">Alunos</span>
                 <h4 class="c-card__title">A Partida da Morte</h4>
                 <div class="c-date">30 DEZ 2022 - 18H25</div>
             </article>
 
             <article class="c-card">
-                <img class="c-card__image" src="./assets/sun-sistem.svg" alt="Sistema solar">
+                <img class="c-card__image" src="./assets/sun-sistem.svg" alt="Sistema solar" loading="lazy" width="212" height="119">
                 <span class="c-tag">Alunos</span>
                 <h4 class="c-card__title">Os planetas do Sistema Solar</h4>
                 <div class="c-date">30 DEZ 2022 - 14H10</div>
             </article>
 
             <article class="c-card">
-                <img class="c-card__image" src="./assets/chrimas-tree.svg" alt="Ávore de natal">
+                <img class="c-card__image" src="./assets/chrimas-tree.svg" alt="Ávore de natal" loading="lazy" width="212" height="119">
                 <span class="c-tag">Alunos</span>
                 <h4 class="c-card__title">O que é o Natal para você?</h4>
                 <div class="c-date">24 DEZ 2022 - 06H45</div>

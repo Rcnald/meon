@@ -1,0 +1,53 @@
+@use '../abstract/' as *;
+
+$layout-name: 'l-header';
+
+.#{$layout-name}{
+    @apply grid grid-rows-[44px_fit-content(1000px)] shadow-header;
+
+    &__wrapper{
+        @apply flex justify-between items-center px-[0.875rem] bg-color-main;
+
+        .c-social-media{
+            @apply hidden;
+
+            @include breakpoint(min-lg){
+               @apply flex;
+            };
+        }
+
+        .c-list{
+            @apply hidden;
+
+            @include breakpoint(min-lg){
+               @apply flex;
+            };
+        }
+    }
+
+    .c-navigation{
+        @apply py-[1.5rem] px-[1.25rem];
+
+        .c-list{
+            @apply text-[0.9375rem] text-color-text;
+
+            &__item{
+                &-arrow{
+                    @apply text-[0.625rem] 
+                }
+            }
+
+            &__content,&__submenu{
+                @apply min-w-[150px];
+
+                &--teen{
+                    @apply min-w-[200px];
+                }
+
+                &--tour{
+                    @apply min-w-[100px];
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,5 @@
+@use './c-social-media' as *;
+@use './c-list' as *;
+@use './c-navigation' as *;
+@use './c-search' as *;
 @tailwind components;
