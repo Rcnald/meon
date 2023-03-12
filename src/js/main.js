@@ -1,11 +1,11 @@
 let lastScrollTop = 0
-header = document.getElementsByClassName('js-header')[0]
+let header = document.getElementsByClassName('js-header')[0]
 window.addEventListener('scroll',function(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if(scrollTop > lastScrollTop){
-        header.style.transform = "translateY(-44px)"
+        header.classList.add('u-hide')
     }else{
-        header.style.transform = "translateY(0px)"
+        header.classList.remove('u-hide')
     }
     lastScrollTop = scrollTop
 })
