@@ -3,7 +3,8 @@
 $layout-name: 'l-header';
 
 .#{$layout-name}{
-    @apply grid grid-rows-[44px_fit-content(1000px)] shadow-header;
+    @apply grid grid-rows-[44px_fit-content(1000px)] shadow-header fixed top-0 z-40 w-full bg-white;
+    transition: all 1s ease-out;
 
     &__wrapper{
         @apply flex justify-between items-center px-[0.875rem] bg-color-main;
@@ -23,13 +24,18 @@ $layout-name: 'l-header';
                @apply flex;
             };
         }
+
     }
 
     .c-navigation{
         @apply py-[1.5rem] px-[1.25rem];
 
         .c-list{
-            @apply text-[0.9375rem] text-color-text;
+            @apply hidden text-[0.9375rem] text-color-text;
+
+            @include breakpoint(min-xl){
+               @apply flex;
+            };
 
             &__item{
                 &-arrow{
