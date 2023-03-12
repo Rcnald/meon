@@ -1,7 +1,13 @@
+@use '../abstract/' as *;
+
 $component-name: 'c-list';
 
 .#{$component-name}{
     @apply flex items-center h-fit text-[0.8125rem] font-bold gap-[1rem] cursor-pointer text-white;
+
+    &__close{
+        @apply items-center;
+    }
 
     &__item{
         @apply relative underline;

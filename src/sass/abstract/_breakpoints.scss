@@ -1,6 +1,6 @@
 @mixin breakpoint($size) {
     @if $size == min-sm {
-        @media (min-width: 640px) { @content; }
+        @media (min-width: 500px) { @content; }
     } @else if $size == min-md {
         @media (min-width: 768px) { @content; }
     } @else if $size == min-lg {
@@ -8,13 +8,13 @@
     } @else if $size == min-xl {
         @media (min-width: 1180px) { @content; }
     } @else if $size == max-sm {
-        @media (max-width: 640px) { @content; }
+        @media (max-width: 500px) { @content; }
     } @else if $size == max-md {
         @media (max-width: 768px) { @content; }
     } @else if $size == max-lg {
         @media (max-width: 1024px) { @content; }
     } @else if $size == max-xl {
-        @media (max-width: 1280px) { @content; }
+        @media (max-width: 1180px) { @content; }
     }
   }
 

@@ -9,33 +9,67 @@ $layout-name: 'l-header';
     &__wrapper{
         @apply flex justify-between items-center px-[0.875rem] bg-color-main;
 
+        .c-list,
         .c-social-media{
             @apply hidden;
 
-            @include breakpoint(min-lg){
-               @apply flex;
-            };
+            @include breakpoint(min-md){
+                @apply flex;
+             };
         }
-
-        .c-list{
-            @apply hidden;
-
-            @include breakpoint(min-lg){
-               @apply flex;
-            };
-        }
-
     }
 
     .c-navigation{
-        @apply py-[1.5rem] px-[1.25rem];
+        @apply py-[1.5rem] px-[1.25rem] relative;
+
+        @include breakpoint(min-xl){
+            @apply grid-cols-[repeat(3,fit-content(1000px))];
+        };
 
         .c-list{
-            @apply hidden text-[0.9375rem] text-color-text;
+            @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+50px)] w-screen bg-white text-color-text;
+            translate: 100%;
+
+            @include breakpoint(min-sm){
+               @apply w-[300px];
+            };
 
             @include breakpoint(min-xl){
-               @apply flex;
+               @apply flex flex-row static bg-inherit h-auto w-auto;
+               translate: 0;
             };
+
+            &.u-toggle{
+                @apply p-3 shadow-header;
+                translate: 0;
+                transition: all 1s;
+
+                @include breakpoint(min-xl){
+                   @apply h-auto w-auto bg-inherit shadow-none;
+                };
+
+                .c-list{
+                    &__item{
+                        @apply flex w-full items-center justify-between;
+
+                        &-arrow{
+                            @apply no-underline
+                        }
+                    }
+
+                    &__link{
+                        @apply flex w-full items-center justify-between;
+                    }
+                }
+            }
+
+            &__close{
+                @apply flex w-full border-b;
+
+                @include breakpoint(min-xl){
+                   @apply hidden;
+                };
+            }
 
             &__item{
                 &-arrow{
@@ -43,7 +77,8 @@ $layout-name: 'l-header';
                 }
             }
 
-            &__content,&__submenu{
+            &__content,
+            &__submenu{
                 @apply min-w-[150px];
 
                 &--teen{
@@ -53,6 +88,17 @@ $layout-name: 'l-header';
                 &--tour{
                     @apply min-w-[100px];
                 }
+            }
+        }
+
+     
+        .c-switch{
+            &--menu{
+                @apply flex order-2;
+                
+                @include breakpoint(min-xl){
+                    @apply hidden
+                };
             }
         }
     }

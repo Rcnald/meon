@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <title>Meon</title>
     </head>
@@ -12,20 +12,20 @@
         <header class="l-header js-header">
             <div class="l-header__wrapper">
                 <ul class="c-social-media">
-                    <li class='c-social-media__item c-social-media__item'>
-                        <a class='c-social-media__icon--facebook bx bxl-facebook' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class="c-social-media__icon--facebook bx bxl-facebook" href="https://www.facebook.com" target="_blank"></a>
                     </li>
 
-                    <li class='c-social-media__item c-social-media__item'>
-                        <a class='c-social-media__icon--instagram bx bxl-instagram' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class="c-social-media__icon--instagram bx bxl-instagram" href="https://www.instagram.com" target="_blank"></a>
                     </li>
                     
-                    <li class='c-social-media__item c-social-media__item'>
-                        <a class='c-social-media__icon--youtube bx bxl-youtube' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class="c-social-media__icon--youtube bx bxl-youtube" href="https://www.youtube.com" target="_blank"></a>
                     </li>
 
-                    <li class='c-social-media__item c-social-media__item'>
-                        <a class='c-social-media__icon--linkedin bx bxl-linkedin' href="#" target="_blank"></a>
+                    <li class="c-social-media__item c-social-media__item">
+                        <a class="c-social-media__icon--linkedin bx bxl-linkedin" href="https://br.linkedin.com" target="_blank"></a>
                     </li>
                 </ul>
 
@@ -38,10 +38,12 @@
 
             <nav class="c-navigation">
                 <img class="c-logo" src="./assets/logo.svg" alt="Logo do Meon" loading="lazy" width="144" height="40">
+    
+                <ul class="c-list js-navigation-list">
+                    <span class="c-list__close js-menu-close"><i class="c-switch c-switch--close bx bx-x"></i>Fechar</span>
 
-                <ul class="c-list">
                     <li class="c-list__item">
-                        <span class="c-list__link">Notícias<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Notícias<i class="c-list__item-arrow bx bxs-down-arrow"></i></span>
 
                         <div class="c-list__content">
                             <ul class="c-list__submenu">
@@ -55,7 +57,7 @@
                     </li>
 
                     <li class="c-list__item">
-                        <span class="c-list__link">Meon Jovem<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Meon jovem<i class="c-list__item-arrow bx bxs-down-arrow"></i></span>
 
                         <div class="c-list__content c-list__content--teen">
                             <ul class="c-list__submenu c-list__submenu--teen">
@@ -71,7 +73,7 @@
                     </li>
 
                     <li class="c-list__item">
-                        <span class="c-list__link">Meon Turismo<i class='c-list__item-arrow bx bxs-down-arrow'></i></span>
+                        <span class="c-list__link">Meon Turismo<i class="c-list__item-arrow bx bxs-down-arrow"></i></span>
 
                         <div class="c-list__content c-list__content--tour">
                             <ul class="c-list__submenu c-list__submenu--tour">
@@ -96,10 +98,11 @@
                         <a class="c-list__link" href="#">Meon Imóveis</a>
                     </li>
                 </ul>
-
-                <span class="c-menu"></span>
-
-                <span class="c-search"><i class='bx bx-search'></i></span>
+                <div class="c-container c-navigation__container">
+                    <span class="c-switch c-switch--menu js-menu-open"><i class='bx bx-menu'></i></span>
+    
+                    <span class="c-switch c-switch--search"><i class="bx bx-search"></i></span>
+                </div>
             </nav>
         </header>
 
@@ -111,15 +114,15 @@
                 
                 <ul class="c-social-media">
                     <li class="c-social-media__item c-social-media__item">
-                        <a class='c-social-media__icon--facebook bx bxl-facebook' href="#" target="_blank"></a>
+                        <a class="c-social-media__icon--facebook bx bxl-facebook" href="#" target="_blank"></a>
                     </li>
 
                     <li class="c-social-media__item c-social-media__item">
-                        <a class='c-social-media__icon--twitter bx bxl-twitter' href="#" target="_blank"></a>
+                        <a class="c-social-media__icon--twitter bx bxl-twitter" href="#" target="_blank"></a>
                     </li>
 
                     <li class="c-social-media__item c-social-media__item">
-                        <a class='c-social-media__icon--whatsapp bx bxl-whatsapp' href="#" target="_blank"></a>
+                        <a class="c-social-media__icon--whatsapp bx bxl-whatsapp" href="#" target="_blank"></a>
                     </li>
 
                     <li class="c-social-media__item">
@@ -127,11 +130,11 @@
 
                         <ul class="c-social-media__submenu">
                             <li class="c-social-media__submenu-item">
-                                <a class='c-social-media__icon--linkedin bx bxl-linkedin' href="#" target="_blank"></a>
+                                <a class="c-social-media__icon--linkedin bx bxl-linkedin" href="#" target="_blank"></a>
                             </li>
                             
                             <li class="c-social-media__submenu-item">
-                                <a class='c-social-media__icon--mail bx bxs-envelope' href="#" target="_blank"></a>
+                                <a class="c-social-media__icon--mail bx bxs-envelope" href="#" target="_blank"></a>
                             </li>
                         </ul>
                     </li>
@@ -300,20 +303,20 @@
             </ul>
 
             <ul class="c-social-media">
-                <li class='c-social-media__item c-social-media__item--facebook'>
-                    <a  class='bx bxl-facebook' href="#" target="_blank"></a>
+                <li class="c-social-media__item c-social-media__item--facebook">
+                    <a  class="bx bxl-facebook" href="#" target="_blank"></a>
                 </li>
 
-                <li class='c-social-media__item c-social-media__item--instagram'>
-                    <a  class='bx bxl-instagram' href="#" target="_blank"></a>
+                <li class="c-social-media__item c-social-media__item--instagram">
+                    <a  class="bx bxl-instagram" href="#" target="_blank"></a>
                 </li>
                 
-                <li class='c-social-media__item c-social-media__item--youtube'>
-                    <a  class='bx bxl-youtube' href="#" target="_blank"></a>
+                <li class="c-social-media__item c-social-media__item--youtube">
+                    <a  class="bx bxl-youtube" href="#" target="_blank"></a>
                 </li>
 
-                <li class='c-social-media__item c-social-media__item--linkedin'>
-                    <a  class='bx bxl-linkedin' href="#" target="_blank"></a>
+                <li class="c-social-media__item c-social-media__item--linkedin">
+                    <a  class="bx bxl-linkedin" href="#" target="_blank"></a>
                 </li>
             </ul>
 

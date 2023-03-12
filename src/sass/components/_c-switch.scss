@@ -1,0 +1,17 @@
+$component-name: 'c-switch';
+
+.#{$component-name}{
+    @apply flex items-center justify-center w-[40px] h-[40px] text-[1.5rem] cursor-pointer;
+
+    &:hover{
+        @apply rounded-full text-color-main-constrast bg-color-text-constrast;
+    }
+
+    &--close{
+    @apply w-auto h-auto;
+
+        &:hover{
+            @apply bg-transparent text-color-text;
+        }
+    }
+}

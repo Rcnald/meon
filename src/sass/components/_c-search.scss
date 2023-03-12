@@ -1,9 +1,0 @@
-$component-name: 'c-search';
-
-.#{$component-name}{
-    @apply flex items-center justify-center w-[40px] h-[40px] text-[1.5rem] cursor-pointer pt-[3px];
-
-    &:hover{
-        @apply rounded-full text-color-main-constrast bg-color-text-constrast;
-    }
-}

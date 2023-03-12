@@ -1,0 +1,9 @@
+$layout-name: 'l-main';
+
+.#{$layout-name}{
+    @apply flex flex-col;
+
+    // &__header{
+    //     @apply ;
+    // }
+}

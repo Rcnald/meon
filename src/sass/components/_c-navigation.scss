@@ -1,5 +1,11 @@
+@use '../abstract/' as *;
+
 $component-name: 'c-navigation';
 
 .#{$component-name}{
-    @apply flex items-center justify-between
+    @apply grid grid-cols-[repeat(2,fit-content(1000px))] items-center justify-between place-items-end;
+
+    &__container{
+        @apply flex gap-[0.25rem];
+    }
 }
