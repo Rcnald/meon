@@ -3,8 +3,7 @@
 $layout-name: 'l-header';
 
 .#{$layout-name}{
-    @apply grid grid-rows-[44px_fit-content(1000px)] shadow-header fixed top-0 z-40 w-full bg-white;
-    transition: all 1s ease-out;
+    @apply grid grid-rows-[44px_fit-content(62.5rem)] fixed top-0 z-40 w-full transition-all duration-1000 ease-out bg-white shadow-header;
 
     &__wrapper{
         @apply flex justify-between items-center px-[0.875rem] bg-color-main;
@@ -23,26 +22,31 @@ $layout-name: 'l-header';
         @apply py-[1.5rem] px-[1.25rem] relative;
 
         @include breakpoint(min-xl){
-            @apply grid-cols-[repeat(3,fit-content(1000px))];
+            @apply grid-cols-[repeat(3,fit-content(62.5rem))];
         };
 
         .c-list{
-            @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+50px)] w-screen bg-white text-color-text;
-            translate: 100%;
+            @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+3.125rem)] w-screen p-3 translate-x-full bg-white text-color-text;
+            transition: all 1s;
 
             @include breakpoint(min-sm){
-               @apply w-[300px];
+               @apply w-[18.75rem];
             };
 
             @include breakpoint(min-xl){
-               @apply flex flex-row static bg-inherit h-auto w-auto;
-               translate: 0;
+               @apply flex flex-row static h-auto w-auto translate-x-0 bg-inherit;
             };
 
+            &__content{
+                @include breakpoint(max-xl){
+                    @apply absolute left-[50%] top-0 w-[18.75rem] h-[calc(100vh+3.125rem)] z-[100] bg-transparent;
+                    // transform-origin: right center;
+                    // transform: translateX(100%) rotateX(-90deg);
+                };
+            } 
+
             &.u-toggle{
-                @apply p-3 shadow-header;
-                translate: 0;
-                transition: all 1s;
+                @apply shadow-header translate-x-0 ;
 
                 @include breakpoint(min-xl){
                    @apply h-auto w-auto bg-inherit shadow-none;
@@ -50,28 +54,80 @@ $layout-name: 'l-header';
 
                 .c-list{
                     &__item{
-                        @apply flex w-full items-center justify-between;
+                        @include breakpoint(max-xl){
+                            @apply flex items-center justify-between w-full static;
+                        };
 
-                        &-arrow{
-                            @apply no-underline
+                        &:hover{
+                            .c-list__content{
+                                @apply bg-transparent;
+
+                                @include breakpoint(max-xl){
+                                    @apply bg-white;
+                                };
+                            }
+                            
+                            .c-list__link{
+                                @include breakpoint(max-xl){
+                                    @apply bg-transparent text-color-main-constrast;
+                                    transition: none
+                                };
+                                
+                            }
+                        }
+                    }
+
+                    &__content{
+                        @include breakpoint(max-xl){
+                           @apply top-0 right-0 h-screen bg-white;
+                           transform-origin: right center;
+                           transform: translate(100%);
+                        };
+
+                        &.u-toggle{
+                            @include breakpoint(max-xl){
+                                @apply top-0 right-0 h-screen;
+                                transform-origin: right center;
+                                transform: translateX(-50%) rotateX(0deg);
+                            };
+                        }
+                    }
+
+                    &__submenu{
+                        @include breakpoint(max-xl){
+                            @apply bg-inherit border-none;
+                        };
+
+                        &:after{
+                            @include breakpoint(max-xl){
+                                @apply bg-inherit border-none;
+                            };
                         }
                     }
 
                     &__link{
-                        @apply flex w-full items-center justify-between;
+                        @apply flex items-center justify-between w-full;
+
+                        &-arrow{
+                            transform: rotate(.75turn)
+                        }
                     }
                 }
             }
 
             &__close{
-                @apply flex w-full border-b;
+                @apply flex w-full border-b pb-2;
 
                 @include breakpoint(min-xl){
                    @apply hidden;
                 };
             }
 
-            &__item{
+            &__link{
+                &-text{
+                    @apply underline;
+                }
+
                 &-arrow{
                     @apply text-[0.625rem] 
                 }

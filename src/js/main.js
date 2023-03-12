@@ -24,3 +24,16 @@ const toggleClick = function(button, elementToggled, utility){
 
 toggleClick(menuOpen,navigationMenu,'u-toggle')
 toggleClick(menuClose,navigationMenu,'u-toggle')
+
+const listItem = Array.from(document.getElementsByClassName('js-list-item'))
+const listContent = Array.from(document.getElementsByClassName('js-list-content'))
+
+const toggleClickSubmenu = function(button, elementToggled, utility){
+    button.forEach(function(el, i){
+        el.addEventListener('click', function(){
+            elementToggled[i].classList.toggle(utility)
+        })
+    })
+}
+
+toggleClickSubmenu(listItem, listContent, 'u-toggle')
