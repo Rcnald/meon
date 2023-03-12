@@ -3,7 +3,8 @@
 $layout-name: 'l-header';
 
 .#{$layout-name}{
-    @apply grid grid-rows-[44px_fit-content(62.5rem)] fixed top-0 z-40 w-full transition-all duration-1000 ease-out bg-white shadow-header;
+    @apply grid grid-rows-[44px_fit-content(62.5rem)] fixed top-0 z-40 w-full bg-white shadow-header;
+    transition: all 1s ease-out;
 
     &__wrapper{
         @apply flex justify-between items-center px-[0.875rem] bg-color-main;
@@ -27,7 +28,9 @@ $layout-name: 'l-header';
 
         .c-list{
             @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+3.125rem)] w-screen p-3 translate-x-full bg-white text-color-text;
-            transition: all 1s;
+            @include breakpoint(max-xl){
+               transition: all 500ms;
+            };
 
             @include breakpoint(min-sm){
                @apply w-[18.75rem];
@@ -40,8 +43,10 @@ $layout-name: 'l-header';
             &__content{
                 @include breakpoint(max-xl){
                     @apply absolute left-[50%] top-0 w-[18.75rem] h-[calc(100vh+3.125rem)] z-[100] bg-transparent;
-                    // transform-origin: right center;
-                    // transform: translateX(100%) rotateX(-90deg);
+                };
+
+                @include breakpoint(max-sm){
+                   @apply w-screen;
                 };
             } 
 
@@ -95,7 +100,7 @@ $layout-name: 'l-header';
 
                     &__submenu{
                         @include breakpoint(max-xl){
-                            @apply bg-inherit border-none;
+                            @apply flex flex-col bg-inherit border-none p-3 gap-[1rem];
                         };
 
                         &:after{
@@ -109,14 +114,16 @@ $layout-name: 'l-header';
                         @apply flex items-center justify-between w-full;
 
                         &-arrow{
-                            transform: rotate(.75turn)
+                            @include breakpoint(max-xl){
+                               transform: rotate(.75turn)
+                            };
                         }
                     }
                 }
             }
 
             &__close{
-                @apply flex w-full border-b pb-2;
+                @apply flex;
 
                 @include breakpoint(min-xl){
                    @apply hidden;
@@ -143,6 +150,14 @@ $layout-name: 'l-header';
 
                 &--tour{
                     @apply min-w-[100px];
+                }
+            }
+
+            &__submenu{
+                .c-close{
+                    @include breakpoint(min-xl){
+                       @apply hidden;
+                    };
                 }
             }
         }

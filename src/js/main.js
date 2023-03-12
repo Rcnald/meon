@@ -22,18 +22,23 @@ const toggleClick = function(button, elementToggled, utility){
     })
 }
 
-toggleClick(menuOpen,navigationMenu,'u-toggle')
-toggleClick(menuClose,navigationMenu,'u-toggle')
+toggleClick(menuOpen, navigationMenu, 'u-toggle')
+toggleClick(menuClose, navigationMenu, 'u-toggle')
 
-const listItem = Array.from(document.getElementsByClassName('js-list-item'))
+const listLink = Array.from(document.getElementsByClassName('js-list-link'))
 const listContent = Array.from(document.getElementsByClassName('js-list-content'))
+const submenuClose = Array.from(document.getElementsByClassName('js-submenu-close'))
+
 
 const toggleClickSubmenu = function(button, elementToggled, utility){
     button.forEach(function(el, i){
         el.addEventListener('click', function(){
             elementToggled[i].classList.toggle(utility)
+            console.log('aki')
         })
     })
 }
 
-toggleClickSubmenu(listItem, listContent, 'u-toggle')
+toggleClickSubmenu(listLink, listContent, 'u-toggle')
+toggleClickSubmenu(submenuClose, listContent, 'u-toggle')
+
