@@ -3,8 +3,7 @@
 $layout-name: 'l-header';
 
 .#{$layout-name}{
-    @apply grid grid-rows-[44px_fit-content(62.5rem)] fixed top-0 z-40 w-full bg-white shadow-header;
-    transition: all 1s ease-out;
+    @apply grid grid-rows-[44px_fit-content(62.5rem)] fixed top-0 z-40 w-full bg-white shadow-header transition-all duration-[1s] ease-[ease-out];
 
     &__wrapper{
         @apply flex justify-between items-center px-[0.875rem] bg-color-main;
@@ -27,9 +26,10 @@ $layout-name: 'l-header';
         };
 
         .c-list{
-            @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+3.125rem)] w-screen p-3 translate-x-full bg-white text-color-text;
+            @apply absolute top-0 flex-col items-start text-[0.9375rem] h-[calc(100vh+3.125rem)] w-screen p-[0.75rem] translate-x-full bg-white text-color-text;
+
             @include breakpoint(max-xl){
-               transition: all 500ms;
+                @apply transition-all duration-[500ms];
             };
 
             @include breakpoint(min-sm){
@@ -42,19 +42,17 @@ $layout-name: 'l-header';
 
             &__content{
                 @include breakpoint(max-xl){
-                    @apply absolute left-[50%] top-0 w-[18.75rem] h-[calc(100vh+3.125rem)] z-[100] bg-transparent;
-                };
+                    @apply w-screen;
 
-                @include breakpoint(max-sm){
-                   @apply w-screen;
+                    @include breakpoint(min-sm){
+                       @apply absolute left-[50%] top-0 w-[18.75rem] h-[calc(100vh+3.125rem)] z-[100] bg-transparent;
+                    };
                 };
             } 
 
             &.u-toggle{
-                @apply shadow-header translate-x-0 ;
-
-                @include breakpoint(min-xl){
-                   @apply h-auto w-auto bg-inherit shadow-none;
+                @include breakpoint(max-xl){
+                    @apply shadow-header translate-x-0;
                 };
 
                 .c-list{
@@ -64,20 +62,10 @@ $layout-name: 'l-header';
                         };
 
                         &:hover{
-                            .c-list__content{
-                                @apply bg-transparent;
-
-                                @include breakpoint(max-xl){
-                                    @apply bg-white;
-                                };
-                            }
-                            
                             .c-list__link{
                                 @include breakpoint(max-xl){
-                                    @apply bg-transparent text-color-main-constrast;
-                                    transition: none
+                                    @apply bg-transparent text-color-main-constrast transition-none;
                                 };
-                                
                             }
                         }
                     }
@@ -85,27 +73,25 @@ $layout-name: 'l-header';
                     &__content{
                         @include breakpoint(max-xl){
                            @apply top-0 right-0 h-screen bg-white;
-                           transform-origin: right center;
-                           transform: translate(100%);
+                           translate: 100% 0;
                         };
 
                         &.u-toggle{
                             @include breakpoint(max-xl){
-                                @apply top-0 right-0 h-screen;
-                                transform-origin: right center;
-                                transform: translateX(-50%) rotateX(0deg);
+                                translate: -50% 0;
+                                rotate: x 0deg
                             };
                         }
                     }
 
                     &__submenu{
                         @include breakpoint(max-xl){
-                            @apply flex flex-col bg-inherit border-none p-3 gap-[1rem];
+                            @apply flex flex-col bg-inherit border-none p-[0.75rem] gap-[1rem];
                         };
 
-                        &:after{
+                        &::after{
                             @include breakpoint(max-xl){
-                                @apply bg-inherit border-none;
+                                @apply hidden;
                             };
                         }
                     }
@@ -115,19 +101,11 @@ $layout-name: 'l-header';
 
                         &-arrow{
                             @include breakpoint(max-xl){
-                               transform: rotate(.75turn)
+                               rotate: z .75turn;
                             };
                         }
                     }
                 }
-            }
-
-            &__close{
-                @apply flex;
-
-                @include breakpoint(min-xl){
-                   @apply hidden;
-                };
             }
 
             &__link{
@@ -153,12 +131,10 @@ $layout-name: 'l-header';
                 }
             }
 
-            &__submenu{
-                .c-close{
-                    @include breakpoint(min-xl){
-                       @apply hidden;
-                    };
-                }
+            .c-close{
+                @include breakpoint(min-xl){
+                   @apply hidden;
+                };
             }
         }
 
