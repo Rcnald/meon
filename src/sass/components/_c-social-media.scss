@@ -6,12 +6,10 @@ $component-name: 'c-social-media';
     @apply flex gap-[0.875rem];
 
     &__item{
-        @apply flex text-[1.5rem] text-color-text-constrast;
-        transition: color 1s ease-out;
+        @apply flex text-[1.5rem] text-color-text-constrast transition-[color] duration-[1s] ease-[ease-out];
 
         &:hover{
-            @apply text-color-text;
-            transition: color 500ms ease-in;
+            @apply text-color-text transition-[color] duration-[500ms] ease-[ease-in];
         }
     }
 
